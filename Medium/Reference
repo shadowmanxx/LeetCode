@@ -1,1 +1,8 @@
-http://www.acmerblog.com/leetcode-single-number-ii-5394.html
+
+1、比特掩码解法：通过比特掩码，清掉出现三次的bit位，剩下的就是那个单个数字。ones表示对应bit出现1次，twos threes同理。ones
+通过“异或”新的数据更新(不一样将掩码置1,一样说明上次出现过，twos置位)；twos通过ones & 新数据产生；threes通过Ones & twos
+得到。最后，若threes存在bit=1的位，需要清掉ones,twos对应位，即重新开始统计。
+
+
+
+参考：http://www.acmerblog.com/leetcode-single-number-ii-5394.html
